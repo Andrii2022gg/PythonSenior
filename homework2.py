@@ -6,7 +6,6 @@ class Student:
         super().__init__()
         self.name = "John"
         self.age = 17
-        self.day_of_live = 365
         self.weight = 75.44
         self.height = 180
         self.money = 100
@@ -14,10 +13,10 @@ class Student:
         self.need_job = 0
 
         self.system = {
-            "day_of_live": 10,
+            "day_of_live": 365,
             "enable_school": 1,
             "enable_job": 1,
-            "out_data_every_day": 1,
+            "out_data_every_day": 0,
             "out_data_to_and_after": 1
         }
 
@@ -87,7 +86,7 @@ class Student:
                 f"MAIN DATA \n\n"
                 f"NAME: {self.name} \n"
                 f"AGE: {self.age} \n"
-                f"DAY OF LIVE: {self.day_of_live} \n"
+                f"DAY OF LIVE: {self.system['day_of_live']} \n"
                 f"WEIGHT: {self.weight} \n"
                 f"HEIGHT: {self.height} \n"
                 f"MONEY: {self.money} \n"
@@ -111,7 +110,7 @@ class Student:
                     f"MAIN DATA \n\n"
                     f"NAME: {self.name} \n"
                     f"AGE: {self.age} \n"
-                    f"DAY OF LIVE: {self.day_of_live} \n"
+                    f"DAY OF LIVE: {self.system['day_of_live']} \n"
                     f"WEIGHT: {self.weight} \n"
                     f"HEIGHT: {self.height} \n"
                     f"MONEY: {self.money} \n"
@@ -128,7 +127,7 @@ class Student:
                 f"MAIN DATA \n\n"
                 f"NAME: {self.name} \n"
                 f"AGE: {self.age} \n"
-                f"DAY OF LIVE: {self.day_of_live} \n"
+                f"DAY OF LIVE: {self.system['day_of_live']} \n"
                 f"WEIGHT: {self.weight} \n"
                 f"HEIGHT: {self.height} \n"
                 f"MONEY: {self.money} \n"

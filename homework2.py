@@ -43,7 +43,7 @@ class Student:
             },
         }
 
-    def steady(self):
+    def study(self):
         for i in self.marks:
             if self.marks[i] > 2:
                 self.marks[i] -= random.randint(0, 2)
@@ -100,7 +100,7 @@ class Student:
         for i in range(self.system["day_of_live"]):
             age = int(self.age + ((i + 1) / 365))
             if self.system["enable_school"] == 1:
-                student.steady()
+                student.study()
             if self.system["enable_job"] == 1:
                 student.work()
 

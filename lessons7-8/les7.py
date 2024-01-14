@@ -43,6 +43,7 @@ count = Counter(10)
 print(next(count))
 print(count.__next__())
 
+<<<<<<< HEAD
 print("============ Generators ============")
 
 
@@ -95,3 +96,14 @@ def helper(work):
 helper = helper("teacher_work")
 print(helper("student_work"))
 print(helper("doctor_work"))
+=======
+
+def degrees(num, max_degrees):
+    for i in range(max_degrees):
+        yield num ** i
+
+result = degrees(50,10000)
+
+for i in result:
+    print(i)
+>>>>>>> origin/master

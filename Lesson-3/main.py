@@ -2,19 +2,15 @@ import random
 import logging
 import time
 
-
 def time_decor(func):
-    def timer(*args, **kwargs):
+    def timing(*args, **kwargs):
         start_time = time.time()
         result = func(*args, **kwargs)
         end_time = time.time()
         elapsed_time = end_time - start_time
         logging.debug(f"Function time '{func.__name__}': {elapsed_time:.10f} seconds")
         return result
-
-    return timer
-
-
+    return timing
 class Human:
     @time_decor
     def __init__(self, name="Human", job=None, home=None, car=None):
@@ -346,10 +342,9 @@ logging.basicConfig(level=logging.DEBUG,
                     filename="logs.log",
                     filemode="w",
                     format="My logging: %(levelname)s: %(asctime)s: %(message)s")
-
-
 @time_decor
 def main():
+
     nick = Human(name="Nick")
 
     child_Alice = Children("Alice", nick, 12)
@@ -364,7 +359,6 @@ def main():
             break
 
     nick.days_indexes(days_of_live)
-
 
 if __name__ == "__main__":
     main()
